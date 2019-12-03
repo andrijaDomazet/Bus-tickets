@@ -1,0 +1,10 @@
+@import "../../index.scss";
+
+.lines {
+  box-sizing: border-box;
+  z-index: -1;
+  position: fixed;
+  width: 250%;
+  height: 0%;
+  border: 0.3px solid rgba(233, 233, 233, 0.89);
+}

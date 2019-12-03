@@ -1,0 +1,61 @@
+button {
+  background: transparent;
+  outline: none !important;
+  border: none;
+  cursor: pointer;
+  height: 20%;
+  padding-left: 2px;
+}
+.seat {
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+
+  .sediste {
+    z-index: 2;
+    position: relative;
+    margin: 2px 0;
+    border: 1px solid #bfbfbf;
+    border-radius: 10px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 14px;
+  }
+  .naslon__1 {
+    z-index: +3;
+    position: absolute;
+    margin-top: -4px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    background: white;
+    width: 20px;
+    height: 6px;
+    // color: green;
+  }
+
+  .naslon__2 {
+    z-index: +3;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 28px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid #bfbfbf;
+    width: 20px;
+    height: 6px;
+  }
+
+  .naslon__3 {
+    z-index: +4;
+    position: absolute;
+    margin-left: 26px;
+    margin-top: 3px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid #bfbfbf;
+    width: 4px;
+    height: 24px;
+  }
+}

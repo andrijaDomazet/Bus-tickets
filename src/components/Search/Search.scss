@@ -1,0 +1,153 @@
+.searchDiv {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px 15px 0 0;
+  background: white;
+  .procceses {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    line-height: 35px;
+    vertical-align: middle;
+    border-bottom: 1px solid gray;
+    .procces-select {
+      display: flex;
+      .procces-symbol {
+        flex: 1;
+        margin-right: 10px;
+        line-height: 35px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #ef6226;
+        color: white;
+        &:hover {
+          // animation: treca-animacija 3s alternate forwards;
+        }
+      }
+      p {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.search {
+  margin: 15px 10px;
+
+  .search-options {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    .radio {
+      margin-right: 3px;
+      border: 1px solid rgb(212, 212, 212);
+      border-radius: 50%;
+      background: rgb(226, 226, 226);
+      width: 20px;
+      height: 20px;
+    }
+    span {
+      margin-right: 15px;
+    }
+    i {
+      font-size: 1.3em;
+      margin-right: 3px;
+      color: #ee8719;
+    }
+    .pcl-btn {
+      border-radius: 4px;
+      padding: 8px 15px;
+      background: #ee8719;
+      color: white;
+      cursor: pointer;
+      i {
+        margin-right: 5px;
+        font-size: 1.1em;
+        color: white;
+      }
+    }
+  }
+  .search-routes {
+    display: flex;
+    text-align: center;
+    line-height: 60px;
+    margin: 5px 0;
+    vertical-align: middle;
+    font-size: 18px;
+    // padding-bottom: 10px;
+    .search-departure {
+      flex: 1;
+    }
+    i {
+      flex: 0.5;
+      line-height: 60px;
+      font-size: 18px;
+    }
+    .search-arrival {
+      flex: 1;
+    }
+    .search-dateD {
+      flex: 0.8;
+    }
+    input {
+      border: none;
+      &:disabled {
+        color: rgb(212, 212, 212);
+        background: white;
+        cursor: not-allowed;
+      }
+    }
+    .search-dateA {
+      flex: 0.8;
+      input {
+        // font-size: 22px;
+        // outline: none;
+      }
+    }
+    .search-list {
+      flex: 1;
+      height: 100%;
+    }
+  }
+}
+
+@keyframes treca-animacija {
+  from {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(60deg);
+  }
+  30% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(210deg);
+  }
+  70% {
+    transform: rotate(240deg);
+  }
+  80% {
+    transform: rotate(270deg);
+  }
+  90% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
