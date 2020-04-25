@@ -6,7 +6,7 @@ export default class Search extends Component {
     search: "",
     oneWay: true,
     searchDeparture: "",
-    searchArrival: ""
+    searchArrival: "",
   };
 
   setTripDirection = () => {
@@ -26,33 +26,33 @@ export default class Search extends Component {
       <i className="far fa-check-circle" />
     );
   };
-  search = event => {
+  search = (event) => {
     this.setState({ searchDeparture: event.target.value.substr(0, 20) });
   };
-  search2 = event => {
+  search2 = (event) => {
     this.setState({ searchArrival: event.target.value.substr(0, 20) });
   };
   searchProps = () => {
-    let search = this.props.lines.filter(line => {
+    let search = this.props.lines.filter((line) => {
       return (
         line.departure
           .toLowerCase()
           .indexOf(this.state.searchDeparture.toLowerCase()) !== -1
       );
     });
-    let search2 = this.props.lines.filter(line => {
+    let search2 = this.props.lines.filter((line) => {
       return (
         line.arrival
           .toLowerCase()
           .indexOf(this.state.searchArrival.toLowerCase()) !== -1
       );
     });
-    var searchResult = search.filter(line => search2.includes(line));
+    var searchResult = search.filter((line) => search2.includes(line));
     this.props.onSearch(searchResult);
   };
   render() {
     return (
-      <div className="searchDiv">
+      <div className={this.props.classes}>
         <div className="procceses">
           <div className="procces-select">
             <div className="procces-symbol">1</div>
@@ -103,7 +103,7 @@ export default class Search extends Component {
                   width: "150px",
                   borderRadius: "20px",
                   fontSize: "18px",
-                  fontWeight: "600"
+                  fontWeight: "600",
                 }}
                 variant="info"
               >
@@ -119,7 +119,7 @@ export default class Search extends Component {
 const options = [
   {
     name: "departure",
-    foo: "search"
+    foo: "search",
   },
-  { name: "arrival", foo: "search2" }
+  { name: "arrival", foo: "search2" },
 ];
