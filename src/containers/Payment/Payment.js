@@ -1,5 +1,5 @@
 import React from "react";
-import Buttons from "../Button/Buttons";
+import Buttons from "../UI/Button/Buttons";
 
 export default function Payment(props) {
   return (

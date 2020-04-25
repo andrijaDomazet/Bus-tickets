@@ -60,7 +60,6 @@
 
   .reservationOptions-left {
     flex: 3;
-
     .bus {
       display: flex;
       flex-direction: column;
@@ -83,7 +82,6 @@
           margin: 4px;
         }
       }
-
       .busStairs2 {
         position: absolute;
         width: 2.2em;
@@ -111,9 +109,11 @@
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: wrap;
-        margin: 5px 5px 6px 5em;
+        margin: 0px 5px 0px 80px;
         height: 100%;
         align-items: center;
+        // border: 1px solid red;
+        padding: 3px;
 
         :nth-child(-4n + 23) {
           margin-bottom: 35px;
