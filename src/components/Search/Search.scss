@@ -1,8 +1,11 @@
+@import "../../index.scss";
+
 .searchDiv {
   width: 90%;
   margin: 0 auto;
   border-radius: 15px 15px 0 0;
   background: white;
+
   .procceses {
     display: flex;
     margin-top: 10px;
@@ -23,7 +26,7 @@
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        background: #ef6226;
+        background: $orange2;
         color: white;
       }
       p {

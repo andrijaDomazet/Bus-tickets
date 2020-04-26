@@ -6,6 +6,7 @@ import Background from "./components/Background/Background";
 import Home from "./containers/Home/Home";
 import Timetable from "./containers/Timetable/Timetable";
 import NoMatch from "./components/NoMatch/NoMatch";
+import AboutUs from "./containers/AboutUs/AboutUs";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Background />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/aboutUs" exact component={AboutUs} />
           <Route path="/redvoznje" exact component={Timetable} />
           <Route component={NoMatch} />
         </Switch>

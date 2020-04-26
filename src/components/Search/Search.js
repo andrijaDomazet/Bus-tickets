@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
+import Button from "../../containers/UI/Button/Button";
 import "./Search.scss";
 export default class Search extends Component {
   state = {
@@ -97,18 +98,7 @@ export default class Search extends Component {
               <input type="date" disabled={this.state.oneWay} />
             </div>
             <div className="search-list">
-              <Button
-                onClick={this.searchProps}
-                style={{
-                  width: "150px",
-                  borderRadius: "20px",
-                  fontSize: "18px",
-                  fontWeight: "600",
-                }}
-                variant="info"
-              >
-                List
-              </Button>
+              <Button clicked={this.searchProps}>List</Button>
             </div>
           </div>
         </div>

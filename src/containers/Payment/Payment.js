@@ -1,5 +1,5 @@
 import React from "react";
-import Buttons from "../UI/Button/Buttons";
+import Button from "../UI/Button/Button";
 
 export default function Payment(props) {
   return (
@@ -29,9 +29,9 @@ export default function Payment(props) {
           })}
         </p>
         <span>Ticket(s) price: {props.price} dinara</span>
-        <Buttons classes={"payment"} clicked={props.soldedTickets.bind(this)}>
+        <Button classes={"payment"} clicked={props.soldedTickets.bind(this)}>
           Next: Final confirm >
-        </Buttons>
+        </Button>
       </div>
     </div>
   );
