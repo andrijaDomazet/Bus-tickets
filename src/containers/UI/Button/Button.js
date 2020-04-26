@@ -1,7 +1,8 @@
 import React from "react";
+import "./Button.scss";
 // import "../../Bus.scss";
 
-export default function Buttons(props) {
+export default function Button(props) {
   return (
     <button
       style={{ visibility: props.visibility }}

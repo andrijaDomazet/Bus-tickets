@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Stairs from "./Stairs/Stairs";
 import Seats from "./Seats/Seats";
-import { Button } from "react-bootstrap";
-import Buttons from "../UI/Button/Buttons";
+// import { Button } from "react-bootstrap";
+import Button from "../UI/Button/Button";
 import SeatOptions from "./SeatOptions/SeatOptions";
 import Payment from "../Payment/Payment";
 import Price from "./Price/Price";
@@ -186,13 +186,13 @@ export default class Buses extends Component {
             <div className="ticketAmount">
               Ticket(s) Amount: {this.state.ukupnaCena} dinara
             </div>
-            <Buttons
+            <Button
               classes={"payment"}
               visibility={this.state.seat.length === 0 ? "hidden" : ""}
               clicked={this.placanje}
             >
               Go to the payment
-            </Buttons>
+            </Button>
           </div>
         </div>
         <Payment

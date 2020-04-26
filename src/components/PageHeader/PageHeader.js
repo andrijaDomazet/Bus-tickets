@@ -40,10 +40,10 @@ const list = () => {
 };
 const headerList = [
   { link: "/", title: "Pocetna" },
-  { link: "/onama", title: "O nama" },
+  { link: "/aboutUs", title: "O nama" },
   { link: "/redvoznje", title: "Red voznje" },
   { link: "/basturist", title: "Basturist" },
   { link: "/dogadjaji", title: "Dogadjaji" },
   { link: "/ostalo", title: "Ostalo" },
-  { link: "/kontakt", title: "Kontakt" }
+  { link: "/kontakt", title: "Kontakt" },
 ];

@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .header {
   width: 90%;
   margin: 0 auto;
@@ -11,8 +13,9 @@
     line-height: 50px;
     vertical-align: middle;
     margin: 0 15px;
-    background: #173463;
+    background: $blue1;
     color: white;
+    // color: black;
     // animation: prva-animacija 5s alternate 3 forwards;
     i {
       padding: 10px;

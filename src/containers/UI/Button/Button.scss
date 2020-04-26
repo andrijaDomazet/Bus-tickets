@@ -1,0 +1,21 @@
+@import "../../../index.scss";
+
+button {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  //   align-items: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: $blue1;
+  color: $white;
+  outline: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}

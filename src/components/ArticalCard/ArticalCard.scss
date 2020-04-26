@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.articalCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: 2px solid $blue1;
+  margin-top: 15px;
+  padding: 15px 5px;
+
+  .articalCard__title {
+    width: 70%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: $blue1;
+    color: white;
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
