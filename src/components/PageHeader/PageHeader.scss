@@ -1,8 +1,11 @@
 @import "../../index.scss";
+.pageHeader__bottom {
+  display: none;
+}
 
 .pageHeader {
+  min-height: 40px;
   background: white;
-  z-index: +2;
   .pageHeader__top {
     float: right;
     margin: 0 5vw;
@@ -23,6 +26,8 @@
       margin-right: 3px;
     }
   }
+}
+@media screen and(min-width:768px) {
   .pageHeader__bottom {
     display: flex;
     padding: 0 5vw;

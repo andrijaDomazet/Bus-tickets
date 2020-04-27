@@ -90,7 +90,7 @@ export default class Search extends Component {
                 </div>
               );
             })}
-            <i className="fas fa-sync-alt" />
+            <i className="fas fa-sync-alt changeDirection" />
             <div className="search-dateD">
               <input type="date" data-date="" data-date-format="DD MMMM YYYY" />
             </div>

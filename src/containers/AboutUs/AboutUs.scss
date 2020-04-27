@@ -3,20 +3,20 @@
 .aboutUs {
   background: url("../../stanica.jpg");
   background-size: cover;
-  background-position: 50% 70%;
+  background-position: 100% 100%;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 .aboutUs > p {
   font-size: 1rem;
   width: 80%;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 10px 30px;
-  border: 3px solid $blue1;
+  border: 2px solid $blue1;
   border-radius: 30px;
-  height: 300px;
-  line-height: 35px;
-  background: rgba(255, 255, 255, 0.85);
+  height: 180px;
+  line-height: 25px;
+  background: rgba(255, 255, 255, 0.712);
   text-align: justify;
 }
 .aboutUS__details {
