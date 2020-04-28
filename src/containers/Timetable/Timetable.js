@@ -4,6 +4,7 @@ import Buses from "../Buses/Buses";
 import Search from "../../components/Search/Search";
 // import Axios from "axios";
 import Header from "../../components/Header/Header";
+import WarningCard from "../../components/WarningCard/WarningCard";
 
 export default class Timetable extends Component {
   state = {
@@ -202,9 +203,10 @@ export default class Timetable extends Component {
   dataSearchMap = () => {
     if (this.state.new_search.length === 0) {
       return (
-        <div className="home__message">
-          <span>Please customize your search.</span>
-        </div>
+        <WarningCard>Please customize your search.</WarningCard>
+        // <div className="home__message">
+        //   <span>Please customize your search.</span>
+        // </div>
       );
     } else {
       return this.state.new_search.map((line, index) => {
