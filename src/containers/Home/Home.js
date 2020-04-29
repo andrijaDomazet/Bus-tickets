@@ -3,7 +3,9 @@ import "./Home.scss";
 import Search from "../../components/Search/Search";
 import WarningCard from "../../components/WarningCard/WarningCard";
 import details from "../../stationDetails2";
+import travelPackages from "../../travelPackages";
 import ArticalCard from "../../components/ArticalCard/ArticalCard";
+import Footer from "../../components/Footer/Footer";
 export default function Home() {
   return (
     <div className="home">
@@ -25,6 +27,15 @@ export default function Home() {
           return <ArticalCard key={index} details={detail} />;
         })}
       </section>
+      <section className="home__section3">
+        <h1>Туристички пакети</h1>
+        <div>
+          {travelPackages.map((option, index) => {
+            return <ArticalCard key={index} details={option} />;
+          })}
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }

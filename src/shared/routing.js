@@ -1,11 +1,11 @@
 export const headerList = [
-  { route: "/", title: "Pocetna" },
-  { route: "/aboutUs", title: "O nama" },
-  { route: "/redvoznje", title: "Red voznje" },
-  { route: "/basturist", title: "Basturist" },
-  { route: "/dogadjaji", title: "Dogadjaji" },
-  { route: "/ostalo", title: "Ostalo" },
-  { route: "/kontakt", title: "Kontakt" },
+  { route: "/", title: "Почетна" },
+  { route: "/aboutUs", title: "О нама" },
+  { route: "/redvoznje", title: "Ред вожње" },
+  { route: "/basturist", title: "Бастурист" },
+  { route: "/dogadjaji", title: "Догађаји" },
+  { route: "/ostalo", title: "Остало" },
+  { route: "/kontakt", title: "Контакт" },
 ];
 
 // export default routing;
