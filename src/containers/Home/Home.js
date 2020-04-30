@@ -6,10 +6,12 @@ import details from "../../stationDetails2";
 import travelPackages from "../../travelPackages";
 import ArticalCard from "../../components/ArticalCard/ArticalCard";
 import Footer from "../../components/Footer/Footer";
+import Carousel from "../../components/Carousel/Carousel";
 export default function Home() {
   return (
     <div className="home">
       <section className="home__section1">
+        <Carousel />
         <div className="home__left">
           <Search classes="searchDiv small" />
         </div>
@@ -23,9 +25,12 @@ export default function Home() {
         </div>
       </section>
       <section className="home__section2">
-        {details.map((detail, index) => {
-          return <ArticalCard key={index} details={detail} />;
-        })}
+        <h2>Службе информација</h2>
+        <div>
+          {details.map((detail, index) => {
+            return <ArticalCard key={index} details={detail} />;
+          })}
+        </div>
       </section>
       <section className="home__section3">
         <h1>Туристички пакети</h1>

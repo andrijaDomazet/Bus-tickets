@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import { Button } from "react-bootstrap";
 import Button from "../../containers/UI/Button/Button";
 import "./Search.scss";
+
 export default class Search extends Component {
   state = {
     search: "",
@@ -69,6 +69,11 @@ export default class Search extends Component {
           </div>
         </div>
         <div className="search">
+          <div className="search__title">
+            <div />
+            <div />
+            ONLINE TICKETS
+          </div>
           <div className="search-options">
             {this.oneWayTrip()}
             <span>One way</span>
@@ -98,7 +103,7 @@ export default class Search extends Component {
               <input type="date" disabled={this.state.oneWay} />
             </div>
             <div className="search-list">
-              <Button clicked={this.searchProps}>List</Button>
+              <Button clicked={this.searchProps}>Претрага</Button>
             </div>
           </div>
         </div>

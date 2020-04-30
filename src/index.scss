@@ -16,6 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+*:focus {
+  outline: none;
+}
 
 $red1: rgb(198, 54, 60);
 $red2: rgb(161, 45, 46);

@@ -5,6 +5,7 @@ export default function ArticalCard(props) {
   return (
     <div className="articalCard">
       {title(props)}
+      <img src="" alt="slika" />
       {props.details[1].map((art, index) => {
         return (
           <div>
