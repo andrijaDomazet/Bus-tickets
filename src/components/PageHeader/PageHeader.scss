@@ -29,19 +29,21 @@
 }
 @media screen and(min-width:768px) {
   .pageHeader__bottom {
+    z-index: +1;
+    position: relative;
     display: flex;
     padding: 0 5vw;
     width: 100vw;
     line-height: 4rem;
     vertical-align: middle;
-    // background: #173463;
-    background: $red2;
-    border-bottom: 2px solid white;
+    background: $red1;
+    border-bottom: 3px solid white;
     align-items: center;
     .logo {
       flex: 1;
     }
     .pageHeader__item {
+      font-size: 1.2rem;
       text-decoration: none;
       flex: 1;
       color: white;
@@ -49,8 +51,17 @@
       margin: 0;
       &:hover {
         background: white;
-        color: #173463;
+        color: $blue1;
       }
     }
+  }
+  .pageHeader__bottom::after {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 5px solid $blue1;
+    content: "";
   }
 }

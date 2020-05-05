@@ -12,11 +12,11 @@ export default function Home() {
     <div className="home">
       <section className="home__section1">
         <Carousel />
-        <div className="home__left">
+        <div className="home__section1__left">
           <Search classes="searchDiv small" />
         </div>
 
-        <div className="home__right">
+        <div className="home__section1__right">
           <WarningCard>
             ОБАВЕШТАВАМО ВАС ДА БЕОГРАДСКА АУТОБУСКА СТАНИЦА ДО ДАЉЕГ НЕЋЕ
             РАДИТИ ! Свима који поседују карте купљене на БАС-у, биће накнадно
@@ -24,19 +24,19 @@ export default function Home() {
           </WarningCard>
         </div>
       </section>
-      <section className="home__section2">
+      <div className="home__section2">
         <h2>Службе информација</h2>
         <div>
           {details.map((detail, index) => {
             return <ArticalCard key={index} details={detail} />;
           })}
         </div>
-      </section>
+      </div>
       <section className="home__section3">
-        <h1>Туристички пакети</h1>
+        <h2>Туристички пакети</h2>
         <div>
           {travelPackages.map((option, index) => {
-            return <ArticalCard key={index} details={option} />;
+            return <ArticalCard classes="red" key={index} details={option} />;
           })}
         </div>
       </section>

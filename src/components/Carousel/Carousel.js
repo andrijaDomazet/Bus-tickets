@@ -26,7 +26,7 @@ export default class Carousel extends Component {
       <div></div>
       <div></div>
       <div></div> */}
-        <img src={images[this.state.currentNumber].img} alt="picture" />
+        <img src={images[this.state.currentNumber].img} alt="carousel" />
         <div
           className="overlay"
           style={{ background: images[this.state.currentNumber].overlay }}
