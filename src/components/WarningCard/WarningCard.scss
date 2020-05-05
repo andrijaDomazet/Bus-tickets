@@ -2,17 +2,21 @@
 
 .warningCard {
   display: flex;
-  width: 90%;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.9);
 
   span {
     color: rgba(169, 68, 66, 0.8);
     width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
     margin: 15px;
     background: #f2dede;
     border: 1px solid #ebccd1;
     border-radius: 4px;
+  }
+}
+@media screen and(min-width:768px) {
+  .warningCard {
+    width: 90%;
   }
 }

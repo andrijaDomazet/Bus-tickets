@@ -1,16 +1,15 @@
 @import "../../index.scss";
 
 .articalCard {
+  display: table-cell;
+  text-align: center;
   position: relative;
   background: $blue1;
   color: white;
   border-radius: 10px;
-  // border: 2px solid $blue1;
-  margin-top: 40px;
   padding: 15px 5px;
-
+  box-shadow: 2px 3px 10px white;
   .articalCard__title {
-    width: 70%;
     padding: 5px 10px;
     border-radius: 5px;
     text-align: center;
@@ -22,8 +21,48 @@
     transform: translateX(-50%);
   }
 }
+.articalCard > div > p {
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 2px 10px;
+  margin: 0;
+}
 .articalCard > img {
-  width: 100%;
-  height: 150px;
+  flex: 1;
+  margin: 10px auto;
+  z-index: 0;
+
   object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid white;
+  position: relative;
+}
+.articalCard.red {
+  background: $red1;
+  box-shadow: 3px 5px 10px $blue1;
+}
+@media screen and(max-width:768px) {
+  .articalCard {
+    display: flex;
+    margin: 10px 10px;
+  }
+  .articalCard > img {
+    max-width: 150px;
+  }
+  .articalCard > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and(min-width:769px) {
+  .articalCard > img {
+    margin: 10px auto;
+    z-index: 0;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid white;
+    position: relative;
+  }
 }
