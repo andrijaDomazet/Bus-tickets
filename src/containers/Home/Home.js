@@ -7,6 +7,8 @@ import travelPackages from "../../travelPackages";
 import ArticalCard from "../../components/ArticalCard/ArticalCard";
 import Footer from "../../components/Footer/Footer";
 import Carousel from "../../components/Carousel/Carousel";
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
+
 export default function Home() {
   return (
     <div className="home">
@@ -39,6 +41,9 @@ export default function Home() {
             return <ArticalCard classes="red" key={index} details={option} />;
           })}
         </div>
+      </section>
+      <section className="home__section4">
+        <GoogleMap />
       </section>
       <Footer />
     </div>

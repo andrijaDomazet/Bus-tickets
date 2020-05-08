@@ -43,7 +43,7 @@
       flex: 1;
     }
     .pageHeader__item {
-      font-size: 1.2rem;
+      font-size: 1rem;
       text-decoration: none;
       flex: 1;
       color: white;
@@ -63,5 +63,11 @@
     bottom: 0;
     border-bottom: 5px solid $blue1;
     content: "";
+  }
+}
+
+@media screen and(min-width:992px) {
+  .pageHeader__item {
+    font-size: 1.2rem;
   }
 }
