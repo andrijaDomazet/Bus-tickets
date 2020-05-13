@@ -1,15 +1,9 @@
-button {
-  // background: transparent;
-  // outline: none !important;
-  // border: none;
-  // cursor: pointer;
-  // height: 20%;
-  // padding-left: 2px;
-}
 .seat {
+  border: none;
   z-index: 1;
   width: 30px;
   height: 30px;
+  margin-bottom: 6px;
   .sediste {
     z-index: 2;
     position: relative;
@@ -55,6 +49,5 @@ button {
     border: 1px solid #bfbfbf;
     width: 4px;
     height: 28px;
-    // background: red;
   }
 }

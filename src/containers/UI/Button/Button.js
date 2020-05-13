@@ -5,7 +5,7 @@ import "./Button.scss";
 export default function Button(props) {
   return (
     <button
-      style={{ visibility: props.visibility }}
+      style={{ visibility: props.visibility, background: props.color }}
       className={props.classes}
       onClick={props.clicked}
     >
