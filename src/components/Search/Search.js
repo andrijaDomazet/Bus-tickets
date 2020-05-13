@@ -103,7 +103,9 @@ export default class Search extends Component {
               <input type="date" disabled={this.state.oneWay} />
             </div>
             <div className="search-list">
-              <Button clicked={this.searchProps}>Претрага</Button>
+              <Button classes="buttons__normal" clicked={this.searchProps}>
+                Претрага
+              </Button>
             </div>
           </div>
         </div>

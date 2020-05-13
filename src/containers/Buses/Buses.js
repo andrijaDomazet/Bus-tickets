@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Stairs from "./Stairs/Stairs";
 import Seats from "./Seats/Seats";
-// import { Button } from "react-bootstrap";
 import Button from "../UI/Button/Button";
 import SeatOptions from "./SeatOptions/SeatOptions";
 import Payment from "../Payment/Payment";
@@ -134,12 +133,11 @@ export default class Buses extends Component {
           />
           <div className="buses__choose">
             <Button
-              style={{ width: "70%", height: "40px" }}
-              onClick={this.chooseBus}
-              variant="danger"
-            >
-              {this.state.choose ? "choose" : "undo"}
-            </Button>
+              classes="buttons__normal"
+              clicked={this.chooseBus}
+              color={this.state.choose ? "green" : "red"}
+              children={this.state.choose ? "choose" : "undo"}
+            />
           </div>
         </div>
         <div
