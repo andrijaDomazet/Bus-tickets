@@ -4,10 +4,11 @@ import details from "../../stationDetails.js";
 import ArticalCard from "../../components/ArticalCard/ArticalCard.js";
 
 export default function AboutUs() {
-  console.log(details);
+  // console.log(details);
 
   return (
     <div className="aboutUs">
+      <img src="./img/carousel/background2.jpg" alt="cover" />
       <p>
         Пријем и отпрема путника и аутобуса представља основну делатност
         Београдске аутобуске станице. Поред свих већих места у Србији, мрежом

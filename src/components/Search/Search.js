@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "../../containers/UI/Button/Button";
 import "./Search.scss";
+// import { map } from "lodash";
 
 export default class Search extends Component {
   state = {
@@ -8,6 +9,13 @@ export default class Search extends Component {
     oneWay: true,
     searchDeparture: "",
     searchArrival: "",
+  };
+
+  redirectToTimetable = () => {
+    console.log(this.props.value);
+
+    this.props.history.push("./redvoznje");
+    this.searchProps();
   };
 
   setTripDirection = () => {
@@ -85,13 +93,22 @@ export default class Search extends Component {
           </div>
           <div className="search-routes">
             {options.map((option, index) => {
+              let lines = [
+                ...new Set(this.props.lines.map((line) => line[option.list])),
+              ];
               return (
                 <div key={index} className={`search-${option.name}`}>
                   <input
                     type="text"
                     placeholder={option.name}
                     onChange={`this.${option.foo}`}
+                    list={option.name}
                   />
+                  <datalist id={option.name}>
+                    {lines.map((line, index) => {
+                      return <option key={index} value={line} />;
+                    })}
+                  </datalist>
                 </div>
               );
             })}
@@ -103,7 +120,10 @@ export default class Search extends Component {
               <input type="date" disabled={this.state.oneWay} />
             </div>
             <div className="search-list">
-              <Button classes="buttons__normal" clicked={this.searchProps}>
+              <Button
+                classes="buttons__normal"
+                clicked={this.redirectToTimetable}
+              >
                 Претрага
               </Button>
             </div>
@@ -117,6 +137,7 @@ const options = [
   {
     name: "departure",
     foo: "search",
+    list: "departure",
   },
-  { name: "arrival", foo: "search2" },
+  { name: "arrival", foo: "search2", list: "arrival" },
 ];

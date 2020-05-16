@@ -2,7 +2,7 @@ import React from "react";
 import "./ArticalCard.scss";
 
 export default function ArticalCard(props) {
-  console.log(props.details[2]);
+  // console.log(props.details[2]);
   const setClass = () => {
     return `articalCard ${props.classes}`;
   };

@@ -1,11 +1,23 @@
 @import "../../index.scss";
 
 .aboutUs {
-  background: url("../../stanica.jpg");
-  background-size: cover;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  height: 150vh;
+  background: white;
+  // background: url("../../stanica.jpg");
+  // background-size: cover;
+  // background-position: 100% 100%;
+  // background-repeat: no-repeat;
+  // overflow: hidden;
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    // z-index: +1;
+    // opacity: 0;
+  }
 }
 .aboutUs > p {
   font-size: 1rem;
@@ -18,6 +30,7 @@
   line-height: 25px;
   background: rgba(255, 255, 255, 0.712);
   text-align: justify;
+  z-index: +999;
 }
 .aboutUS__details {
   width: 90%;
