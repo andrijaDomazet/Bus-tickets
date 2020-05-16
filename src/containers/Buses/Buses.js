@@ -63,7 +63,7 @@ export default class Buses extends Component {
   };
 
   availableSeats = () => {
-    var availableSeats =
+    let availableSeats =
       this.props.numberOfSeats.length -
       this.props.tickets.length -
       this.state.seat.length;

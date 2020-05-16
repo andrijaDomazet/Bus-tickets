@@ -5,17 +5,18 @@ import WarningCard from "../../components/WarningCard/WarningCard";
 import details from "../../stationDetails2";
 import travelPackages from "../../travelPackages";
 import ArticalCard from "../../components/ArticalCard/ArticalCard";
-import Footer from "../../components/Footer/Footer";
 import Carousel from "../../components/Carousel/Carousel";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
+import data from "../../data.js";
+export default function Home(props) {
+  console.log(props.history);
 
-export default function Home() {
   return (
     <div className="home">
       <section className="home__section1">
         <Carousel />
         <div className="home__section1__left">
-          <Search classes="searchDiv small" />
+          <Search classes="searchDiv small" lines={data} {...props} />
         </div>
 
         <div className="home__section1__right">
@@ -45,7 +46,6 @@ export default function Home() {
       <section className="home__section4">
         <GoogleMap />
       </section>
-      <Footer />
     </div>
   );
 }

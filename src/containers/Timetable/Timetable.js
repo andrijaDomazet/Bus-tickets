@@ -198,16 +198,10 @@ export default class Timetable extends Component {
 
   searchDeparture = (search) => {
     this.setState({ new_search: search });
-    console.log("App", search);
   };
   dataSearchMap = () => {
     if (this.state.new_search.length === 0) {
-      return (
-        <WarningCard>Please customize your search.</WarningCard>
-        // <div className="home__message">
-        //   <span>Please customize your search.</span>
-        // </div>
-      );
+      return <WarningCard children="Please customize your search." />;
     } else {
       return this.state.new_search.map((line, index) => {
         return (
@@ -230,11 +224,12 @@ export default class Timetable extends Component {
   };
   render() {
     return (
-      <div>
+      <div style={{ minHeight: "150vh" }}>
         <Search
           classes="searchDiv"
           onSearch={this.searchDeparture}
           lines={this.state.lines}
+          {...this.props}
         />
         <Header />
         {this.dataSearchMap()}

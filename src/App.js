@@ -7,6 +7,7 @@ import Home from "./containers/Home/Home";
 import Timetable from "./containers/Timetable/Timetable";
 import NoMatch from "./components/NoMatch/NoMatch";
 import AboutUs from "./containers/AboutUs/AboutUs";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/redvoznje" exact component={Timetable} />
           <Route component={NoMatch} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
