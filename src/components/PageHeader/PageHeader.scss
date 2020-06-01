@@ -53,6 +53,10 @@
         background: white;
         color: $blue1;
       }
+      &.active {
+        background: white;
+        color: $blue1;
+      }
     }
   }
   .pageHeader__bottom::after {

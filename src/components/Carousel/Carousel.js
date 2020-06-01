@@ -7,25 +7,45 @@ export default class Carousel extends Component {
     currentNumber: 0,
   };
   componentDidMount = () => {
-    let intervalId = setInterval(this.setCuraselNumber, 10000);
+    let intervalId = setInterval(this.setCarouselNumber, 10000);
     this.setState({ intervalId: intervalId });
   };
   componentWillUnmount = () => {
     clearInterval(this.state.intervalId);
   };
-  setCuraselNumber = () => {
-    if (this.state.currentNumber === 2) {
+  setCarouselNumber = () => {
+    if (this.state.currentNumber === images.length - 1) {
       return this.setState({ currentNumber: 0 });
     }
     this.setState({ currentNumber: this.state.currentNumber + 1 });
   };
+  changeCarouselPosition = (index) => {
+    this.setState({ currentNumber: index });
+  };
+  carouselControler = (count, slide) => {
+    const slideClass = (index, slide) => {
+      if (index === slide) {
+        return "currentSlide";
+      }
+    };
+    return (
+      <div className="slides">
+        {count.map((slidePos, index) => {
+          return (
+            <div
+              key={index}
+              className={slideClass(index, slide)}
+              onClick={() => this.changeCarouselPosition(index)}
+            />
+          );
+        })}
+      </div>
+    );
+  };
   render() {
     return (
       <div className="carousel">
-        {/* <div></div>
-      <div></div>
-      <div></div>
-      <div></div> */}
+        {this.carouselControler(images, this.state.currentNumber)}
         <img src={images[this.state.currentNumber].img} alt="carousel" />
         <div
           className="overlay"

@@ -136,7 +136,7 @@ export default class Buses extends Component {
               classes="buttons__normal"
               clicked={this.chooseBus}
               color={this.state.choose ? "green" : "red"}
-              children={this.state.choose ? "choose" : "undo"}
+              children={this.state.choose ? "izaberi" : "zatvori"}
             />
           </div>
         </div>
@@ -164,13 +164,13 @@ export default class Buses extends Component {
                   );
                 })}
               </div>
-              <div className="hallway">hallway</div>
+              <div className="hallway">hodnik</div>
             </div>
             <SeatOptions />
           </div>
           <div className="reservationOptions-right">
             <div className="selectedSeats">
-              <p>Selected seat(s)</p>
+              <p>Odabrana sedišta:</p>
               <div className="selectedSeats-box">
                 {this.state.seat.map((s, index) => {
                   return (
@@ -182,14 +182,14 @@ export default class Buses extends Component {
               </div>
             </div>
             <div className="ticketAmount">
-              Ticket(s) Amount: {this.state.ukupnaCena} dinara
+              Ukupan iznos: {this.state.ukupnaCena} dinara
             </div>
             <Button
               classes={"payment"}
               visibility={this.state.seat.length === 0 ? "hidden" : ""}
               clicked={this.placanje}
             >
-              Go to the payment
+              Odabir plaćanja
             </Button>
           </div>
         </div>
