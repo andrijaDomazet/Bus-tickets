@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "../../containers/UI/Button/Button";
 import "./Search.scss";
-// import { map } from "lodash";
+import data from "../../data";
 
 export default class Search extends Component {
   state = {
@@ -65,37 +65,36 @@ export default class Search extends Component {
         <div className="procceses">
           <div className="procces-select">
             <div className="procces-symbol">1</div>
-            <p>select jurney and seat</p>
+            <p>odabir polaska i sedišta</p>
           </div>
           <div className="procces-select">
             <div className="procces-symbol">2</div>
-            <p>payment information</p>
+            <p>informacije plaćanja</p>
           </div>
           <div className="procces-select">
             <div className="procces-symbol">3</div>
-            <p>result of transaction</p>
+            <p>potvrda rezervacije</p>
           </div>
         </div>
         <div className="search">
           <div className="search__title">
             <div />
             <div />
-            ONLINE TICKETS
+            Е-KARTE
           </div>
           <div className="search-options">
             {this.oneWayTrip()}
-            <span>One way</span>
+            <span>Jedan smer</span>
             {this.returnTrip()}
-            <span>Round trip</span>
+            <span>Povratna</span>
             <div className="pcl-btn">
-              <i className="fas fa-user"></i>Passanger Card Login
+              <i className="fas fa-user"></i>Registracija korisnika
             </div>
           </div>
           <div className="search-routes">
+            {/* <div>{this.props.lines[]}</div> */}
             {options.map((option, index) => {
-              let lines = [
-                ...new Set(this.props.lines.map((line) => line[option.list])),
-              ];
+              let lines = [...new Set(data.map((line) => line[option.list]))];
               return (
                 <div key={index} className={`search-${option.name}`}>
                   <input
@@ -123,9 +122,8 @@ export default class Search extends Component {
               <Button
                 classes="buttons__normal"
                 clicked={this.redirectToTimetable}
-              >
-                Претрага
-              </Button>
+                children="Pretraga"
+              />
             </div>
           </div>
         </div>
@@ -135,9 +133,9 @@ export default class Search extends Component {
 }
 const options = [
   {
-    name: "departure",
+    name: "polazak",
     foo: "search",
     list: "departure",
   },
-  { name: "arrival", foo: "search2", list: "arrival" },
+  { name: "dolazak", foo: "search2", list: "arrival" },
 ];

@@ -3,7 +3,7 @@ import "./WarningCard.scss";
 
 export default function WarningCard(props) {
   return (
-    <div className="warningCard">
+    <div className={"warningCard" + " " + props.clasees}>
       <span>{props.children}</span>
     </div>
   );

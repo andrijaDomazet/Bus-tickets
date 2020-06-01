@@ -56,7 +56,12 @@ export default class PageHeader extends Component {
 const getHeaderOptions = () => {
   return headerList.map((item, index) => {
     return (
-      <NavLink className="pageHeader__item" key={index} to={`${item.route}`}>
+      <NavLink
+        className="pageHeader__item"
+        exact
+        key={index}
+        to={`${item.route}`}
+      >
         {item.title}
       </NavLink>
     );

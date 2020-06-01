@@ -7,28 +7,26 @@ import travelPackages from "../../travelPackages";
 import ArticalCard from "../../components/ArticalCard/ArticalCard";
 import Carousel from "../../components/Carousel/Carousel";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
-import data from "../../data.js";
-export default function Home(props) {
-  console.log(props.history);
-
+// import data from "../../data.js";
+export default function Home() {
   return (
     <div className="home">
       <section className="home__section1">
         <Carousel />
         <div className="home__section1__left">
-          <Search classes="searchDiv small" lines={data} {...props} />
+          <Search classes="searchDiv small" />
         </div>
 
         <div className="home__section1__right">
-          <WarningCard>
-            ОБАВЕШТАВАМО ВАС ДА БЕОГРАДСКА АУТОБУСКА СТАНИЦА ДО ДАЉЕГ НЕЋЕ
-            РАДИТИ ! Свима који поседују карте купљене на БАС-у, биће накнадно
-            омогућено да врате исте
+          <WarningCard classes="style1">
+            OBAVEŠTAVAMO VAS DA BEOGRADSKA AUTOBUSKA STANICA DO DALjEG NEĆE
+            RADITI ! Svima koji poseduju karte kupljene na BAS-u, biće naknadno
+            omogućeno da vrate iste
           </WarningCard>
         </div>
       </section>
       <div className="home__section2">
-        <h2>Службе информација</h2>
+        <h2>Službe informacija</h2>
         <div>
           {details.map((detail, index) => {
             return <ArticalCard key={index} details={detail} />;
@@ -36,7 +34,7 @@ export default function Home(props) {
         </div>
       </div>
       <section className="home__section3">
-        <h2>Туристички пакети</h2>
+        <h2>Turistički paketi</h2>
         <div>
           {travelPackages.map((option, index) => {
             return <ArticalCard classes="red" key={index} details={option} />;

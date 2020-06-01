@@ -33,3 +33,9 @@ $blue1: rgb(12, 64, 118);
 $white: rgb(255, 255, 255);
 $orange1: rgb(255, 199, 44);
 $orange2: #ee8719;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

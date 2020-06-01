@@ -5,7 +5,6 @@
   margin: 0 auto;
   border-radius: 15px 15px 0 0;
   background: rgba(255, 255, 255, 0.95);
-  // border: 1px solid red;
   .procceses {
     display: flex;
     margin-top: 10px;
@@ -35,7 +34,6 @@
     }
   }
   .search {
-    // border: 1px solid green;
     padding: 15px 10px;
 
     .search-options {
@@ -72,7 +70,6 @@
       }
     }
     .search-routes {
-      // border: 1px solid blue;
       display: flex;
       text-align: center;
       line-height: 60px;
@@ -119,12 +116,8 @@
   }
 }
 .searchDiv.small {
-  width: auto;
   min-width: 300px;
-  // margin: 10px auto;
-  padding: 5px;
-  border-radius: 15px;
-  box-shadow: 1px 2px 5px $blue1;
+
   .procceses {
     display: none;
   }
@@ -137,11 +130,13 @@
   }
   .search {
     position: relative;
+    background: white;
+    border-radius: 15px;
   }
   .search__title {
     position: absolute;
     width: 70%;
-    top: -20px;
+    top: -15px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2rem;
@@ -206,7 +201,7 @@
       transition: 1s ease-out;
       cursor: pointer;
       &:hover {
-        transform: rotate(180deg);
+        @include transform(rotate(180deg));
       }
     }
     .search-list {

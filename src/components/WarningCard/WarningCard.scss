@@ -1,5 +1,8 @@
 @import "../../index.scss";
-
+.warningCard {
+  background: rgb(71, 71, 71);
+  color: white;
+}
 .warningCard {
   display: flex;
   margin: 0 auto;
