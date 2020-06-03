@@ -1,7 +1,6 @@
 @import "../../index.scss";
 
 .home {
-  // border: 1px solid green;
   .home__section1 {
     display: flex;
     flex-direction: column;
@@ -27,7 +26,6 @@
   .home__section4 {
     background: white;
     height: 70vh;
-    // text-align: center;
   }
 }
 @media screen and(max-width:768px) {
@@ -56,10 +54,9 @@
         padding: 0 15px;
       }
     }
-    .home__section2 {
-      height: 80vh;
-    }
     .home__section2 > div {
+      width: 95%;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-column-gap: 0.8rem;

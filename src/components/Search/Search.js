@@ -77,7 +77,7 @@ export default class Search extends Component {
           </div>
         </div>
         <div className="search">
-          <div className="search__title">
+          <div className="search__title" contentEditable="true">
             <div />
             <div />
             Е-KARTE

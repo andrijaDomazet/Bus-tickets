@@ -4,8 +4,6 @@ import details from "../../stationDetails.js";
 import ArticalCard from "../../components/ArticalCard/ArticalCard.js";
 
 export default function AboutUs() {
-  // console.log(details);
-
   return (
     <div className="aboutUs">
       <img src="./img/carousel/background2.jpg" alt="cover" />
@@ -22,7 +20,7 @@ export default function AboutUs() {
       </p>
       <div className="aboutUS__details">
         {details.map((detail, index) => {
-          return <ArticalCard key={index} details={detail} />;
+          return <ArticalCard clas key={index} details={detail} />;
         })}
       </div>
     </div>

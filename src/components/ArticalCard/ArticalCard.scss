@@ -4,19 +4,20 @@
   display: table-cell;
   text-align: center;
   position: relative;
-  background: $blue1;
+  background: rgba(12, 63, 118, 0.95);
   color: white;
   border-radius: 10px;
-  padding: 15px 5px;
+  padding: 20px 5px;
   box-shadow: 2px 3px 10px white;
   .articalCard__title {
+    width: 60%;
     padding: 5px 10px;
     border-radius: 5px;
     text-align: center;
-    background: $blue1;
-    color: white;
+    background: white;
+    color: $blue1;
     position: absolute;
-    top: -7%;
+    top: -8%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -24,14 +25,12 @@
 .articalCard > div > p {
   font-size: 0.9rem;
   text-align: left;
-  padding: 2px 10px;
+  padding: 5px 10px;
   margin: 0;
 }
 .articalCard > img {
   flex: 1;
   margin: 10px auto;
-  z-index: 0;
-
   object-fit: cover;
   border-radius: 15px;
   border: 2px solid white;
@@ -40,6 +39,10 @@
 .articalCard.red {
   background: $red1;
   box-shadow: 3px 5px 10px $blue1;
+}
+.articalCard.blue {
+  background: $blue1;
+  box-shadow: 3px 5px 10px $red1;
 }
 @media screen and(max-width:768px) {
   .articalCard {
@@ -57,12 +60,11 @@
 }
 @media screen and(min-width:769px) {
   .articalCard > img {
+    position: relative;
     margin: 10px auto;
-    z-index: 0;
     width: 90%;
     object-fit: cover;
     border-radius: 15px;
     border: 2px solid white;
-    position: relative;
   }
 }
