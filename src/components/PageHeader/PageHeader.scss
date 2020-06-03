@@ -32,7 +32,7 @@
     z-index: +1;
     position: relative;
     display: flex;
-    padding: 0 5vw;
+    padding: 0 5%;
     width: 100vw;
     line-height: 4rem;
     vertical-align: middle;
@@ -43,30 +43,53 @@
       flex: 1;
     }
     .pageHeader__item {
+      position: relative;
       font-size: 1rem;
       text-decoration: none;
       flex: 1;
       color: white;
       text-align: center;
       margin: 0;
+      z-index: 1;
+      transition: color 300ms ease-in-out;
       &:hover {
-        background: white;
         color: $blue1;
       }
       &.active {
         background: white;
         color: $blue1;
+        font-weight: 700;
       }
     }
+    .pageHeader__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      z-index: -1;
+      transition: transform 300ms ease-in-out;
+      transform: scaleY(0);
+      transform-origin: bottom;
+    }
+
+    .pageHeader__item:hover::before,
+    .pageHeader__item:focus::before {
+      border-top: 5px solid $blue1;
+      transform: scaleY(1);
+    }
   }
-  .pageHeader__bottom::after {
-    z-index: 0;
+
+  .pageHeader__bottom::before {
     position: absolute;
+    content: "";
     left: 0;
     right: 0;
     bottom: 0;
     border-bottom: 5px solid $blue1;
-    content: "";
+    z-index: 0;
   }
 }
 

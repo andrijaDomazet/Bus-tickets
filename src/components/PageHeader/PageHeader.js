@@ -22,22 +22,6 @@ export default class PageHeader extends Component {
   render() {
     return (
       <div className="pageHeader">
-        {/* <div className="pageHeader__top">
-          <div>
-            <i className="far fa-sticky-note" /> Online Survey
-          </div>
-          <div>
-            <i className="fas fa-user" />
-            Passenger Card Login
-          </div>
-          <div>
-            <i className="fas fa-plus" /> Passenger Card Register
-          </div>
-          <div>
-            English
-            <i className="fas fa-sort-down" />
-          </div>
-        </div> */}
         <div className="pageHeader__bottom">
           <div className="logo">SBT</div>
           {getHeaderOptions()}
