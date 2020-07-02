@@ -106,7 +106,8 @@
         button {
           border: none;
           width: 90%;
-          border-radius: 25px;
+          // padding: 1rem auto;
+          border-radius: 1.5rem;
         }
       }
     }
@@ -116,13 +117,13 @@
   }
 }
 .searchDiv.small {
-  min-width: 300px;
+  min-width: 18rem;
 
   .procceses {
     display: none;
   }
   .search-options {
-    padding-top: 40px;
+    padding-top: 2.5rem;
     justify-content: center;
   }
   .pcl-btn {
@@ -131,7 +132,7 @@
   .search {
     position: relative;
     background: rgba(255, 255, 255, 0.92);
-    border-radius: 15px;
+    border-radius: 1rem;
   }
   .search__title {
     position: absolute;
@@ -141,10 +142,10 @@
     transform: translateX(-50%);
     font-size: 1.2rem;
     font-weight: 600;
-    letter-spacing: 1.4px;
-    text-shadow: 1px 2px rgb(95, 95, 95);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    letter-spacing: 0.01rem;
+    text-shadow: 0.1rem 0.1rem rgb(95, 95, 95);
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
     margin: 0 auto;
     padding: 15px 0;
     text-align: center;
@@ -180,9 +181,9 @@
   .search-routes {
     position: relative;
     flex-direction: column;
-    line-height: 40px;
+    line-height: 2.5rem;
     input {
-      height: 50px;
+      height: 3rem;
       border-bottom: 1px solid grey;
     }
     .changeDirection {
@@ -190,14 +191,14 @@
       background-color: white;
       position: absolute;
       top: inherit;
-      margin-top: 35px;
+      margin-top: 2rem;
       left: 65%;
-      padding: 0 5px;
+      padding: 0 0.3rem;
       border-radius: 50%;
       border: 1px solid grey;
-      height: 30px;
-      width: 30px;
-      line-height: 30px;
+      height: 2rem;
+      width: 2rem;
+      line-height: 2rem;
       transition: 1s ease-out;
       cursor: pointer;
       &:hover {
@@ -219,5 +220,11 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and(max-width:768px) {
+  .searchDiv.small {
+    margin-top: 2.5rem;
   }
 }
