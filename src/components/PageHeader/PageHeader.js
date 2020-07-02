@@ -4,7 +4,7 @@ import "./PageHeader.scss";
 import ToggleButton from "./SideDrawer/ToggleButton";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import { headerList } from "../../shared/routing";
-
+import logo from "../../bus.png";
 export default class PageHeader extends Component {
   state = {
     sideDrawerOpen: false,
@@ -23,7 +23,9 @@ export default class PageHeader extends Component {
     return (
       <div className="pageHeader">
         <div className="pageHeader__bottom">
-          <div className="logo">SBT</div>
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
           {getHeaderOptions()}
         </div>
 
@@ -40,12 +42,7 @@ export default class PageHeader extends Component {
 const getHeaderOptions = () => {
   return headerList.map((item, index) => {
     return (
-      <NavLink
-        className="pageHeader__item"
-        exact
-        key={index}
-        to={`${item.route}`}
-      >
+      <NavLink className="pageHeader__item" exact key={index} to={item.route}>
         {item.title}
       </NavLink>
     );

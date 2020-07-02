@@ -5,14 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  overflow-x: hidden;
   margin: 0 auto;
-  display: flex;
 }
 html {
   scroll-behavior: smooth;
-  width: 100vw;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -25,6 +21,7 @@ code {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: normal;
 }
 $red1: rgb(198, 54, 60);
 $red2: rgb(161, 45, 46);
@@ -37,4 +34,15 @@ $orange2: #ee8719;
   -webkit-transform: $property;
   -ms-transform: $property;
   transform: $property;
+}
+
+@media screen and(min-width:1500px) {
+  * {
+    font-size: 24px;
+  }
+}
+@media screen and(min-width:1800px) {
+  * {
+    font-size: 32px;
+  }
 }

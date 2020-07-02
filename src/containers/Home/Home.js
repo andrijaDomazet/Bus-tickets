@@ -7,7 +7,7 @@ import travelPackages from "../../travelPackages";
 import ArticalCard from "../../components/ArticalCard/ArticalCard";
 import Carousel from "../../components/Carousel/Carousel";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
-// import data from "../../data.js";
+
 export default function Home() {
   return (
     <div className="home">
@@ -18,7 +18,7 @@ export default function Home() {
         </div>
 
         <div className="home__section1__right">
-          <WarningCard classes="style1">
+          <WarningCard classes="color">
             OBAVEŠTAVAMO VAS DA BEOGRADSKA AUTOBUSKA STANICA DO DALjEG NEĆE
             RADITI ! Svima koji poseduju karte kupljene na BAS-u, biće naknadno
             omogućeno da vrate iste

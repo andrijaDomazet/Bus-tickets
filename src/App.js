@@ -14,7 +14,11 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        {/* <WarningCard children="This page is made through practice for personal use only. The site is not intended for commercial purposes." /> */}
+        <WarningCard
+          // show="none"
+          classes="black"
+          children="This page is made through practice for personal use only. The site is not intended for commercial purposes."
+        />
         <PageHeader />
         <Background />
         <Switch>

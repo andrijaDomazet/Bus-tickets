@@ -59,7 +59,12 @@ export default class Timetable extends Component {
   };
   dataSearchMap = () => {
     if (this.state.new_search.length === 0) {
-      return <WarningCard children="Molimo Vas prilagodite pretragu." />;
+      return (
+        <WarningCard
+          classes="color"
+          children="Molimo Vas prilagodite pretragu."
+        />
+      );
     } else {
       return this.state.new_search.map((line, index) => {
         return (
