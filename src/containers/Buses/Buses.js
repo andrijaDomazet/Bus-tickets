@@ -58,6 +58,8 @@ export default class Buses extends Component {
 
   //daje u stejtu true cime se prikazuje odredjeni bus
   chooseBus = () => {
+    console.log("Myref", this.myRef);
+
     window.scrollTo(0, this.myRef.offsetTop);
     this.setState({ choose: !this.state.choose });
   };

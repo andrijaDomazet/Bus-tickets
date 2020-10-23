@@ -1,34 +1,14 @@
 @import "../../index.scss";
-.pageHeader__bottom {
+.pageHeader__main {
   display: none;
 }
 
 .pageHeader {
   min-height: 40px;
   background: white;
-  .pageHeader__top {
-    float: right;
-    margin: 0 5vw;
-    color: #fd8300;
-    height: 25px;
-    line-height: 25px;
-    div {
-      display: inline-block;
-      color: gray;
-      font-size: 0.8em;
-      font-weight: 500;
-      margin-left: 15px;
-    }
-    i {
-      display: inline-block;
-      font-size: 1.1em;
-      color: #fd8300;
-      margin-right: 3px;
-    }
-  }
 }
 @media screen and(min-width:768px) {
-  .pageHeader__bottom {
+  .pageHeader__main {
     z-index: +1;
     position: relative;
     display: flex;
@@ -84,7 +64,7 @@
     }
   }
 
-  .pageHeader__bottom::before {
+  .pageHeader__main::before {
     position: absolute;
     content: "";
     left: 0;
