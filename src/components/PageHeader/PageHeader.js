@@ -22,13 +22,12 @@ export default class PageHeader extends Component {
   render() {
     return (
       <div className="pageHeader">
-        <div className="pageHeader__bottom">
+        <div className="pageHeader__main">
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
           {getHeaderOptions()}
         </div>
-
         <ToggleButton clicked={this.drawerToggleClickHandler} />
         <SideDrawer
           show={this.state.sideDrawerOpen}

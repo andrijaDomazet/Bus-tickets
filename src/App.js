@@ -15,7 +15,7 @@ export default function App() {
     <div className="App">
       <Router>
         <WarningCard
-          // show="none"
+          show="none"
           classes="black"
           children="This page is made through practice for personal use only. The site is not intended for commercial purposes."
         />
